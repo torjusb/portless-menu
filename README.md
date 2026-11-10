@@ -2,6 +2,8 @@
 
 Portless Menu is a macOS menu bar app. It lists every URL that [portless](https://portless.sh) currently serves. It reads the portless state directory and applies the same rules as `portless list`.
 
+<img src="docs/screenshot.png" alt="The Portless Menu dropdown listing four URLs grouped by project" width="345">
+
 ## Requirements
 
 - macOS 15 or later.
