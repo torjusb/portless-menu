@@ -1,0 +1,7 @@
+.build/
+build/
+.run/
+.swiftpm/
+.DS_Store
+node_modules/
+todo.md
