@@ -2,7 +2,7 @@ import AppKit
 import PortlessCore
 import SwiftUI
 
-struct PortlessMenuApp: App {
+struct PortsideApp: App {
     @State private var store = StateStore()
 
     var body: some Scene {
@@ -46,7 +46,7 @@ struct MenuContent: View {
         Divider()
         Button("Refresh") { store.refresh() }
             .keyboardShortcut("r")
-        Button("Quit Portless Menu") { NSApplication.shared.terminate(nil) }
+        Button("Quit Portside") { NSApplication.shared.terminate(nil) }
             .keyboardShortcut("q")
     }
 
