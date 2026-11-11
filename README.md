@@ -1,8 +1,8 @@
-# Portless Menu
+# Portside
 
-Portless Menu is a macOS menu bar app. It lists every URL that [portless](https://portless.sh) currently serves. It reads the portless state directory and applies the same rules as `portless list`.
+Portside is a macOS menu bar app. It lists every URL that [portless](https://portless.sh) currently serves. It reads the portless state directory and applies the same rules as `portless list`.
 
-<img src="docs/screenshot.png" alt="The Portless Menu dropdown listing four URLs grouped by project" width="345">
+<img src="docs/screenshot.png" alt="The Portside dropdown listing four URLs grouped by project" width="345">
 
 ## Requirements
 
@@ -14,16 +14,16 @@ Portless Menu is a macOS menu bar app. It lists every URL that [portless](https:
 ## Build
 
 ```sh
-cd PortlessMenu
+cd Portside
 scripts/bundle.sh
 ```
 
-The script builds a release binary and writes `PortlessMenu/build/Portless Menu.app`. It signs the app ad hoc. You can run it again at any time.
+The script builds a release binary and writes `Portside/build/Portside.app`. It signs the app ad hoc. You can run it again at any time.
 
 ## Run
 
 ```sh
-open "PortlessMenu/build/Portless Menu.app"
+open "Portside/build/Portside.app"
 ```
 
 The menu bar shows a network symbol and the number of active URLs. The menu groups URLs by project. The project is the label before the TLD, so `klavio-forms.comfort.localhost` is in `comfort`. Click a URL to open it in your default browser. Hold Option to copy the URL instead. The menu updates when portless changes its state files. It also checks every 5 seconds for routes whose process stopped.
@@ -31,13 +31,13 @@ The menu bar shows a network symbol and the number of active URLs. The menu grou
 To print the active URLs and exit, run the binary with `--list`:
 
 ```sh
-"PortlessMenu/build/Portless Menu.app/Contents/MacOS/PortlessMenu" --list
+"Portside/build/Portside.app/Contents/MacOS/Portside" --list
 ```
 
 ## Test
 
 ```sh
-cd PortlessMenu
+cd Portside
 swift test
 ```
 
@@ -49,7 +49,7 @@ The `dummy-projects` folder has two small Node servers. `notes-api` returns JSON
 dummy-projects/start.sh
 curl -sk https://notes-api.localhost
 curl -sk https://shop-web.localhost
-"PortlessMenu/build/Portless Menu.app/Contents/MacOS/PortlessMenu" --list
+"Portside/build/Portside.app/Contents/MacOS/Portside" --list
 dummy-projects/stop.sh shop-web
 dummy-projects/stop.sh
 ```

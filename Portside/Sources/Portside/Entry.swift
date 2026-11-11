@@ -6,7 +6,7 @@ enum Entry {
     @MainActor
     static func main() {
         guard CommandLine.arguments.contains("--list") else {
-            PortlessMenuApp.main()
+            PortsideApp.main()
             return
         }
         let snapshot = StateReader.current()

@@ -2,11 +2,11 @@
 import PackageDescription
 
 let package = Package(
-    name: "PortlessMenu",
+    name: "Portside",
     platforms: [.macOS(.v15)],
     targets: [
         .target(name: "PortlessCore"),
-        .executableTarget(name: "PortlessMenu", dependencies: ["PortlessCore"]),
+        .executableTarget(name: "Portside", dependencies: ["PortlessCore"]),
         .testTarget(name: "PortlessCoreTests", dependencies: ["PortlessCore"]),
     ]
 )
